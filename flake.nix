@@ -13,15 +13,18 @@
     flake-utils.lib.eachDefaultSystem
     (
       system: let
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             pkg-config
             clang
-            go_1_22
+            go
             golangci-lint
             reuse
+            pcsclite
+            pcsc-tools
+            pynitrokey
           ];
         };
 
