@@ -1,0 +1,30 @@
+mockfile
+
+file.version v2
+file.created 2024-05-15T10:59:05+02:00
+file.creator stv0g@rise
+
+meta attr.channel.type usb
+meta attr.channel.usb.addr 34
+meta attr.channel.usb.bus 5
+meta attr.ifd.serial 
+meta attr.ifd.version 1.7.0
+meta attr.name.friendly Nitrokey Nitrokey 3 [CCID/ICCD Interface] 00 00
+meta attr.name.system Nitrokey Nitrokey 3 [CCID/ICCD Interface] 00 00
+meta attr.name.vendor Nitrokey
+meta nitrokey.uuid faabf284f9848452874c8f810eb04be0
+meta nitrokey.version 1.7.0
+meta status.active_protocol t1,any
+meta status.atr 3b8f01805d4e6974726f6b657900000000006a
+meta status.reader Nitrokey Nitrokey 3 [CCID/ICCD Interface] 00 00
+meta status.state powered,negotiable,present
+
+#     start      end method
+on    0.000    0.000 BeginTransaction
+on    0.031    0.031 Transmit 00a4040007a0000005272101ff 7903040d0071087b799430b406dbdd8f04faabf2849000
+on   70.490   70.490 Transmit 0004dead00 9000
+on 1996.315 1996.315 Transmit 000100002371076d792d637265647316f1060000000000000000000000000000000000000000780000 9000
+on 2887.900 2887.900 Transmit 00b500000971076d792d6372656400 7801f171076d792d637265649000
+on 2977.680 2977.680 Transmit 00b700002d71076d792d6372656483086d792d6c6f67696e840b6d792d70617373776f7264850b6d792d6d6574616461746100 9000
+on 5822.195 5822.195 Transmit 00b500000971076d792d6372656400 7801f171076d792d6372656483086d792d6c6f67696e840b6d792d70617373776f7264850b6d792d6d657461646174619000
+on 5915.327 5915.327 EndTransaction
