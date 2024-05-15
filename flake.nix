@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Steffen Vogel <post@steffenvogel.de>
+# SPDX-FileCopyrightText: 2024 Steffen Vogel <post@steffenvogel.de>
 # SPDX-License-Identifier: Apache-2.0
 {
   inputs = {
@@ -13,7 +13,10 @@
     flake-utils.lib.eachDefaultSystem
     (
       system: let
-        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+        pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+        };
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
@@ -24,7 +27,7 @@
             reuse
             pcsclite
             pcsc-tools
-            pynitrokey
+            # pynitrokey
           ];
         };
 

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Steffen Vogel <post@steffenvogel.de>
+# SPDX-FileCopyrightText: 2024 Steffen Vogel <post@steffenvogel.de>
 # SPDX-License-Identifier: Apache-2.0
 
 linters-settings:
@@ -27,7 +27,7 @@ linters-settings:
     sections:
     - standard
     - default
-    - prefix(cunicu.li/skeleton)
+    - prefix(cunicu.li/go-trussed-secrets)
     - blank
     - dot
 
