@@ -18,9 +18,9 @@ This `skeleton` repo a template for new Go packages belonging to the cunicu orga
 
 ## Usage
 
-## Authors
+## Contact
 
-- Steffen Vogel ([@stv0g](https://github.com/stv0g))
+Please have a look at the contact page: [cunicu.li/docs/contact](https://cunicu.li/docs/contact).
 
 ## License
 
