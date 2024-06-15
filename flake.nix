@@ -5,27 +5,31 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
-  outputs = {
-    self,
-    nixpkgs,
-    flake-utils,
-  }:
-    flake-utils.lib.eachDefaultSystem
-    (
-      system: let
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
         pkgs = nixpkgs.legacyPackages.${system};
-      in {
+      in
+      {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             pkg-config
             clang
-            go_1_22
+            go
             golangci-lint
             reuse
           ];
+
+          hardeningDisable = [ "fortify" ];
         };
 
-        formatter = nixpkgs.alejandra;
+        formatter = pkgs.nixfmt-rfc-style;
       }
     );
 }
